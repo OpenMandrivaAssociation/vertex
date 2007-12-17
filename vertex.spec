@@ -21,7 +21,6 @@ BuildRequires:  Mesa-common-devel
 BuildRequires:  gtk+1.2-devel
 BuildRequires:  gtkglarea-devel
 BuildRequires:  imlib-devel
-BuildRoot:  %{_tmppath}/%{name}-%{version}
 
 %description
 Vertex 3D Model Assembler (often reffered to as just Vertex) is a unique
