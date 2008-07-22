@@ -1,6 +1,6 @@
 %define name    vertex
 %define version 0.1.15
-%define release %mkrel 3
+%define release %mkrel 5
 
 %define title       Vertex
 %define longtitle   3D model assembler
