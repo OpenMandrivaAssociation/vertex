@@ -1,6 +1,6 @@
 %define name    vertex
-%define version 0.1.15
-%define release %mkrel 5
+%define version 0.1.16
+%define release %mkrel 1
 
 %define title       Vertex
 %define longtitle   3D model assembler
@@ -35,7 +35,7 @@ gives instant rendering feedback.
 
 %prep
 %setup -q
-%patch
+#%patch
 # mv LICENSE at usual location
 mv -f vertex/data/LICENSE .
 bzcat %{SOURCE1} > %{name}-16.png
