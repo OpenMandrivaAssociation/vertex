@@ -12,7 +12,7 @@ Summary:    3D model assembler
 License:    GPL
 Group:      Graphics
 Source0:    ftp://wolfpack.twu.net/users/wolfpack/%{name}-%{version}.tar.bz2
-Patch:      %{name}-0.1.15.build.patch.bz2
+Patch:      %{name}-0.1.16-lib64.patch
 Source1:    %{name}-16.png.bz2
 Source2:    %{name}-32.png.bz2
 Source3:    %{name}-48.png.bz2
@@ -35,7 +35,7 @@ gives instant rendering feedback.
 
 %prep
 %setup -q
-#%patch
+%patch -p 1
 # mv LICENSE at usual location
 mv -f vertex/data/LICENSE .
 bzcat %{SOURCE1} > %{name}-16.png
@@ -43,7 +43,11 @@ bzcat %{SOURCE2} > %{name}-32.png
 bzcat %{SOURCE3} > %{name}-48.png
 
 %build
-./configure Linux -v --disable=arch-i686 --libdir=-L%{_libdir}
+%ifarch x86_64
+./configure Linux64 -v --disable=arch-i686
+%else
+./configure Linux -v --disable=arch-i686
+%endif
 make CFLAGS="%{optflags} -D__USE_BSD -DHAVE_IMLIB `gtk-config --cflags`"
 
 %install
