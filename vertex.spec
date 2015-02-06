@@ -1,6 +1,6 @@
 %define name    vertex
 %define version 0.1.16
-%define release 3
+%define release 4
 
 %define debug_package %{nil}
 
