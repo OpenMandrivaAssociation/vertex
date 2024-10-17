@@ -18,7 +18,7 @@ Patch:      %{name}-0.1.16-lib64.patch
 Source1:    %{name}-16.png.bz2
 Source2:    %{name}-32.png.bz2
 Source3:    %{name}-48.png.bz2
-Url:        http://wolfpack.twu.net/Vertex
+Url:        https://wolfpack.twu.net/Vertex
 BuildRequires:  mesa-common-devel
 BuildRequires:  gtk+1.2-devel
 BuildRequires:  gtkglarea-devel
