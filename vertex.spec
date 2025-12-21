@@ -19,6 +19,11 @@ Source1:    %{name}-16.png.bz2
 Source2:    %{name}-32.png.bz2
 Source3:    %{name}-48.png.bz2
 Url:        https://wolfpack.twu.net/Vertex
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:  mesa-common-devel
 BuildRequires:  gtk+1.2-devel
 BuildRequires:  gtkglarea-devel
